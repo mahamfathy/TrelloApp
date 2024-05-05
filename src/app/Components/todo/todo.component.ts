@@ -83,14 +83,18 @@ export class TodoComponent implements OnInit {
     }
   }
   deleteTask(taskId: number) {
-    this.tasks.splice(taskId,1)
+    this.tasks.splice(taskId, 1);
   }
 
-  onEditTask(task: Task, taskId: number) {}
-  deleteInprogressTask(taskId: number){
-
+  onEditTask(task: Task, taskId: number) {
+    this.todoForm.controls['item'].setValue(task.title);
+    this.updatedIndex = taskId;
+    this.isEditEnabled = true
   }
-  deleteDoneTask(taskId: number){
-
+  deleteInprogressTask(taskId: number) {
+    this.inProgress.splice(taskId, 1);
+  }
+  deleteDoneTask(taskId: number) {
+    this.done.splice(taskId, 1);
   }
 }

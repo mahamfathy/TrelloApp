@@ -69,3 +69,6 @@
 span {
   font-weight: normal;
 }
+mat-form-field{
+  width: 100%;
+}
