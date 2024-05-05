@@ -82,7 +82,9 @@ export class TodoComponent implements OnInit {
       );
     }
   }
-  deleteTask(taskId: number) {}
+  deleteTask(taskId: number) {
+    this.tasks.splice(taskId,1)
+  }
 
   onEditTask(task: Task, taskId: number) {}
   deleteInprogressTask(taskId: number){
