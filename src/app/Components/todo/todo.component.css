@@ -1,9 +1,10 @@
 .example-container {
-  width: 400px;
+  width: 30%;
   max-width: 100%;
-  margin: 0 25px 25px 0;
+  margin: 45px 27px 0 5px;
   display: inline-block;
   vertical-align: top;
+  border-radius: 30px;
 }
 
 .example-list {
@@ -13,10 +14,12 @@
   border-radius: 4px;
   overflow: hidden;
   display: block;
+  border-radius: 5px;
+
 }
 
 .example-box {
-  padding: 20px 10px;
+  padding: 5px 10px;
   border-bottom: solid 1px #ccc;
   color: rgba(0, 0, 0, 0.87);
   display: flex;
@@ -62,7 +65,7 @@
   padding: 10px;
   background-color: beige;
   border-radius: 4px;
-  color: blue;
+  color: chocolate;
   font-size: 1.5rem;
   font-weight: 600;
 }
@@ -71,4 +74,7 @@ span {
 }
 mat-form-field{
   width: 100%;
+}
+mat-card{
+  background-color: #496868;
 }

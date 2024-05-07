@@ -1,7 +1,6 @@
 <div class="container-fluid">
   <div class="row">
-    <div class="col-md-3" style="background-color: cadetblue; height: 90vh">
-      <div style="background-color: black">
+    <div class="col-md-3" style="background-color: cadetblue; height: 543px">
         <mat-card class="m-3 p-3">
           <form [formGroup]="todoForm">
             <mat-form-field appearance="outline">
@@ -17,7 +16,7 @@
             @if (!isEditEnabled) {
             <button
               mat-raised-button
-              color="primary"
+              color="warn"
               (click)="addTask()"
               [disabled]="todoForm.invalid"
             >
@@ -35,13 +34,12 @@
             }
           </form>
         </mat-card>
-      </div>
     </div>
 
-    <div class="col-md-9 mt-3">
+    <div class="col-md-9">
       <div class="cdkDropList">
         <div class="row">
-          <div class="col-md-4">
+          <div class="col-md-12">
             <div class="example-container">
               <h2 class="head-title">
                 To Do @if (tasks.length>0) {

@@ -48,7 +48,7 @@ export class TodoComponent implements OnInit {
 
   ngOnInit(): void {
     this.todoForm = this.fb.group({
-      item: ['', Validators.required],
+      item: ['',[ Validators.required,Validators.minLength(3)]],
     });
   }
 
@@ -89,7 +89,7 @@ export class TodoComponent implements OnInit {
   onEditTask(task: Task, taskId: number) {
     this.todoForm.controls['item'].setValue(task.title);
     this.updatedIndex = taskId;
-    this.isEditEnabled = true
+    this.isEditEnabled = true;
   }
   deleteInprogressTask(taskId: number) {
     this.inProgress.splice(taskId, 1);
